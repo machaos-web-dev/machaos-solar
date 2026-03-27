@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Machaos Solar — Website Assistant for Solar Businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Machaos Solar
+  </a>
+  <a href="#cta" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Built for Solar Businesses
+    </div>
+    <h1>Never Miss a<br/><em>Solar Customer</em><br/>Again</h1>
+    <p class="hero-sub">Instantly respond to customer inquiries, answer common solar questions, and capture leads — even when you're offline.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" onclick="toggleChat()">Try Live Demo</a>
+      <a href="#how" class="btn-ghost">See how it works →</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      <span>Scroll to explore</span>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section class="demo-section" id="demo">
+  <div class="demo-inner">
+    <div class="demo-left">
+      <p class="section-label">Live Demo</p>
+      <h2 class="section-title">See How It Works</h2>
+      <p class="section-body">This is a live demo of a website assistant designed for solar businesses. It responds instantly, answers common questions, and captures inquiries.</p>
+
+      <p style="margin-top:32px; font-weight:500; font-size:0.9rem; color:var(--ink);">Try asking questions like:</p>
+      <ul style="margin-top:14px; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:10px;">
+        <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:var(--slate);">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--sun-glow);border:1px solid var(--border-warm);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--sun);flex-shrink:0;">→</span>
+          "How much is a 5kVA system?"
+        </li>
+        <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:var(--slate);">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--sun-glow);border:1px solid var(--border-warm);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--sun);flex-shrink:0;">→</span>
+          "What can it power?"
+        </li>
+        <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:var(--slate);">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--sun-glow);border:1px solid var(--border-warm);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--sun);flex-shrink:0;">→</span>
+          "Do you offer installation?"
+        </li>
+        <li style="display:flex;align-items:center;gap:10px;font-size:0.875rem;color:var(--slate);">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--sun-glow);border:1px solid var(--border-warm);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--sun);flex-shrink:0;">→</span>
+          "I want a quote"
+        </li>
+      </ul>
+
+      <div class="demo-cue">
+        <div class="demo-cue-icon">💬</div>
+        <span>Open the chat at the bottom right to try it now.</span>
+      </div>
+
+      <div class="demo-note">
+        <strong style="color:var(--ink);">Note:</strong> This is a demo setup based on typical solar customer inquiries. Your live assistant would be configured for your specific products and pricing.
+      </div>
+    </div>
+
+    <div class="demo-right">
+      <div class="demo-chat-header">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <div class="chat-header-info">
+          <div class="chat-header-name">Machaos Solar</div>
+          <div class="chat-header-status"><span class="status-dot"></span> Online now</div>
+        </div>
+      </div>
+      <div class="demo-chat-body">
+        <div class="msg bot">
+          <div class="msg-avatar" style="background:var(--sun);font-size:0.65rem;">S</div>
+          <div class="msg-bubble">Hi there! 👋 Welcome to Machaos Solar. I can answer questions about our solar systems, pricing, and installation. How can I help you today?</div>
+        </div>
+        <div class="msg user">
+          <div class="msg-bubble">How much is a 5kVA system?</div>
+        </div>
+        <div class="msg bot">
+          <div class="msg-avatar" style="background:var(--sun);font-size:0.65rem;">S</div>
+          <div class="msg-bubble">A 5kVA solar system typically starts from $3,200 installed, depending on panel brand and battery type. It's one of our most popular setups for medium-sized homes. Would you like a personalised quote?</div>
+        </div>
+        <div class="msg user">
+          <div class="msg-bubble">Yes, I want a quote</div>
+        </div>
+        <div class="msg bot">
+          <div class="msg-avatar" style="background:var(--sun);font-size:0.65rem;">S</div>
+          <div class="msg-bubble">Great! Please leave your name and number and our team will call you back within the day. 📋</div>
+        </div>
+      </div>
+      <div class="demo-suggestions">
+        <button class="suggestion-chip" onclick="toggleChat()">What can it power?</button>
+        <button class="suggestion-chip" onclick="toggleChat()">Do you install?</button>
+        <button class="suggestion-chip" onclick="toggleChat()">Battery options?</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div>
+        <p class="section-label">How It Works</p>
+        <h2 class="section-title">Simple by design. Effective by default.</h2>
+      </div>
+      <p class="section-body">Three things happen every time a potential customer visits your website. Each one matters.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8870A" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8l4 4-4 4"/></svg>
+        </div>
+        <h3>Visitors ask questions about solar systems on your website</h3>
+        <p>Customers arrive with questions. Instead of leaving or hunting for a phone number, they get answers right away.</p>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8870A" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>The assistant responds instantly with clear answers</h3>
+        <p>Common questions about system sizes, pricing, load shedding, and installation are answered immediately — no waiting.</p>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8870A" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+        </div>
+        <h3>Customer details are captured and sent to you for follow-up</h3>
+        <p>Interested customers share their name and contact details. You receive them ready for follow-up — no enquiry falls through.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section" id="benefits">
+  <div class="benefits-inner">
+    <div class="benefits-header">
+      <p class="section-label" style="color:var(--sun-light);">Why It Works</p>
+      <h2 class="section-title">What it does for your business</h2>
+      <p class="section-body">Every feature is chosen for one reason: to help solar businesses convert more website visitors into paying customers.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Never miss customer inquiries</h3>
+        <p>Your website stays responsive 24 hours a day. Whether it's midnight or a Sunday, customers get an immediate reply.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Answer common solar questions instantly</h3>
+        <p>Pricing, system sizes, what appliances can run, installation timelines — all answered without you lifting a finger.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Capture leads automatically</h3>
+        <p>Contact details are collected and sent to you in real time. You focus on installations while your website does the qualifying.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+        </div>
+        <h3>Reduce repetitive WhatsApp messages</h3>
+        <p>Stop answering the same questions on WhatsApp every day. Let your website handle the basics so your time goes to closings.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Stay responsive even when offline</h3>
+        <p>On a site visit, in a meeting, or simply off for the weekend — your website keeps the conversation going.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Built around how solar customers think</h3>
+        <p>The questions, the language, and the flow are shaped for solar buyers — not copied from a generic template.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section class="why-section" id="why">
+  <div class="why-inner">
+    <p class="section-label" style="text-align:center;">Why This Matters</p>
+    <h2 class="section-title" style="max-width:100%;text-align:center;margin:0 auto 24px;">Most solar enquiries go cold in the first hour</h2>
+    <div class="why-quote">
+      Many solar businesses lose customers because they don't respond quickly enough. This service ensures every visitor gets a response — and has a clear path to reach you.
+    </div>
+    <p class="why-body">A customer visits your website, has a question, and can't find an answer. So they leave. They search again. They find your competitor. That sequence plays out dozens of times a week for businesses without a reliable way to respond at the moment of interest.</p>
+    <div class="why-stats">
+      <div class="stat">
+        <div class="stat-num">78%</div>
+        <div class="stat-label">of customers buy from the business that responds first</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">&lt;5min</div>
+        <div class="stat-label">response time dramatically increases conversion rates</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">coverage — your website never goes to voicemail</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-header">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">Straightforward pricing. No surprises.</h2>
+      <p class="section-body">Two fees, clearly explained. No contracts. No hidden costs.</p>
+    </div>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <p class="pricing-type">One-Time</p>
+        <h3>Setup Fee</h3>
+        <div class="pricing-amount">
+          <span class="price-currency">$</span>
+          <span class="price-num">149</span>
+          <span class="price-note">&nbsp;once</span>
+        </div>
+        <div class="pricing-divider"></div>
+        <p class="pricing-desc">Everything needed to get your website assistant live and configured for your business.</p>
+        <div class="pricing-includes">
+          <div class="pricing-item"><span class="pricing-check">✓</span> Custom configuration for your business</div>
+          <div class="pricing-item"><span class="pricing-check">✓</span> Solar-specific question flows</div>
+          <div class="pricing-item"><span class="pricing-check">✓</span> Your branding and contact details</div>
+          <div class="pricing-item"><span class="pricing-check">✓</span> Integration with your website</div>
+          <div class="pricing-item"><span class="pricing-check">✓</span> Lead capture setup</div>
+        </div>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-tag">Ongoing</span>
+        <p class="pricing-type">Monthly Plan</p>
+        <h3>Management Fee</h3>
+        <div class="pricing-amount">
+          <span class="price-currency">$</span>
+          <span class="price-num">99</span>
+          <span class="price-note">&nbsp;/ month</span>
+        </div>
+        <div class="pricing-divider"></div>
+        <p class="pricing-desc">Your assistant stays accurate, up to date, and working — without any effort on your end.</p>
+        <div class="pricing-includes">
+          <div class="pricing-item"><span class="pricing-check" style="background:rgba(232,135,10,0.15);border-color:rgba(232,135,10,0.3);color:var(--sun-light);">✓</span> Monthly updates to pricing and products</div>
+          <div class="pricing-item"><span class="pricing-check" style="background:rgba(232,135,10,0.15);border-color:rgba(232,135,10,0.3);color:var(--sun-light);">✓</span> Improvements based on customer questions</div>
+          <div class="pricing-item"><span class="pricing-check" style="background:rgba(232,135,10,0.15);border-color:rgba(232,135,10,0.3);color:var(--sun-light);">✓</span> Monitoring for issues or gaps</div>
+          <div class="pricing-item"><span class="pricing-check" style="background:rgba(232,135,10,0.15);border-color:rgba(232,135,10,0.3);color:var(--sun-light);">✓</span> Lead delivery to your inbox</div>
+          <div class="pricing-item"><span class="pricing-check" style="background:rgba(232,135,10,0.15);border-color:rgba(232,135,10,0.3);color:var(--sun-light);">✓</span> Priority support</div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-note-box">
+      The monthly fee covers real, ongoing work — keeping your assistant accurate as your pricing changes, your product range grows, and your customers' questions evolve.
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-bg"></div>
+  <div class="cta-inner">
+    <p class="section-label" style="color:var(--sun-light);text-align:center;">Get Started</p>
+    <h2 class="section-title">Start Capturing More Solar Customers</h2>
+    <p class="section-body">Let's set up a website assistant for your business. Most setups are live within 3–5 working days.</p>
+    <div class="cta-buttons">
+      <a href="mailto:ecommercemachaos@gmail.com" class="btn-primary">Request Setup</a>
+      <a href="#demo" class="btn-outline">See the demo first</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">
+    <span class="nav-logo-dot"></span>
+    Machaos Solar
+  </a>
+  <span class="footer-copy">© 2026 Machaos. Built for solar businesses.</span>
+</footer>
+
+
+
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/69c0b77e50336d1c38116836/1jkccphim';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+
+    function toggleChat() {
+        if (typeof Tawk_API !== 'undefined') {
+            Tawk_API.maximize();
+        }
+    }
+</script>
+
+</body>
+</html>
